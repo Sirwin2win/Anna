@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Tables are used to represent values in a row/column form -->
+     <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>IMAGE</th>
+            <th>PRICE</th>
+            <th>ACTION</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>SHOE</td>
+            <td><img src="images/shoe1.avif" style="height: 50px; width: 50px;" /></td>
+            <td>$50</td>
+            <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>BAG</td>
+            <td><img src="images/bag1.avif" style="height: 50px; width: 50px;" /></td>
+            <td>$80</td>
+            <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>LAPTOP</td>
+            <td><img src="images/laptop1.avif" style="height: 50px; width: 50px;" /></td>
+            <td>$500</td>
+            <td><a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+     </table>
+     <hr />
+     <h1>HTML FORMS</h1>
+     <!-- HTTP(Hyper Text Transfer Protocol)
+     HTML forms are used to get information from our users
+     Some form attributes:
+     1. action: Action is used to specify the backend file where the form will be 
+     submitted to. e.g login.php etc
+     2. method: this is used to specify the http method used e.g POST,GET
+     ,PUT,DELETE, PATCH
+     3. enctype: This is used especially when we're uploading a file to the
+     server e.g multipart/form-data
+     Some input attributes
+     1. name: This filed must be filled in order to capture the values in the 
+     input tag and sent to the server
+     2. placeholder: This is used to add additional guide for the input field
+     3. value: This is used to hold a value in the input field
+     4. type: This is used to specify the type of input expected from users
+     -->
+     <form action="login.php" enctype="multipart/form-data" method="post">
+        <pre>
+
+            <input type="text" name="fname" placeholder="Enter you first name"/>
+
+            <input type="file" name="fname" placeholder="Enter you first name"/>
+
+            <input type="date" name="fname" placeholder="Enter you first name"/>
+
+            <input type="checkbox" name="fname" placeholder="Enter you first name"/>
+
+            <input type="radio" name="fname" placeholder="Enter you first name"/>
+
+            <input type="reset" name="fname" placeholder="Enter you first name"/>
+
+            <input type="color" name="fname" placeholder="Enter you first name"/>
+
+            <input type="number" name="fname" placeholder="Enter price"/>
+
+            <input type="password" name="psw" placeholder="Enter password"/>
+
+            <textarea name="" id="" style="height: 300px; width: 500px;">
+
+            </textarea>
+
+            <select name="" id="">
+                <option selected disabled>-Select-</option>
+                <option value="volvo">volvo</option>
+                <option value="ford">ford</option>
+                <option value="toyota">toyota</option>
+                <option value="honda">honda</option>
+            </select>
+
+            <input type="submit" value="Login"/>
+        </pre>
+     </form>
+
+     <form>
+        <pre>
+            
+           <label for="email">Email:</label>    <input type="text" id="email" placeholder="email@example.com">
+
+            
+           <label for="password">Password:</label> <input type="text" id="password" placeholder="********">
+        </pre>
+     </form>
+</body>
+</html>
