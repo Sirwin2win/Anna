@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Colors</title>
+    <style>
+        #demo1{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(100,100,255);
+            color: rgb(255,255,255);
+        }
+        #demo2{
+            height: 200px;
+            width: 200px;
+            background-color: rgba(255,0,0,1);
+            color: rgba(255,255,255,1);
+        }
+        #hex1{
+            height: 200px;
+            width: 200px;
+            background-color: #ac2;
+            color: #fff;
+        }
+        #hex2{
+            height: 200px;
+            width: 200px;
+            background-color: #00ffff;
+            color: #ffffff;
+        }
+        #hsl1{
+            height: 200px;
+            width: 200px;
+            background-color: hsl(180,100%,50%);
+            color: hsl(0, 100%, 100%);
+        }
+        #hsl2{
+            height: 300px;
+            width: 200px;
+            background-color: hsla(0,100%,50%,1);
+            color: hsl(0, 100%, 100%);
+            text-transform: capitalize;
+            text-align: justify;
+            text-decoration-line: underline;
+            padding: 50px 20px;
+            text-decoration-color: green;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 5px;
+            margin: 200px 100px;
+            /* margin-left: 200px; */
+            /* font-family: chiller; */
+            font-family: "Annie Use Your Telescope", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+        h2,h3{
+               font-family: "Annie Use Your Telescope", cursive;
+            font-weight: 400;
+            font-style: normal;
+              height: 300px;
+            width: 200px;
+            background-color: hsla(0,100%,50%,1);
+            color: hsl(0, 100%, 100%);
+        }
+        /* Descendant combinator */
+        /* div p{
+            color: #0f0;
+        } */
+         /* Child combinator */
+        /* div > p{
+            color: #0f0;
+        } */
+         /* Next combinator */
+        /* section + p{
+            color: red;
+        } */
+        /* Subsequent combinator */
+        section ~ p {
+            color: red;
+        }
+    </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 
+    CSS color
+    1. rgb and rgba
+    2. hex
+    3. hsl and hsla
+    -->
+    <!-- RGB Red, Green , Blue. Ranges from 0-255-->
+    <!-- RGBA Red, Green , Blue, Alpha. Ranges from 0-255 while alpha ranges from 0-1 -->
+     <h1 id="demo1">Header One</h1>
+     <h1 id="demo2">Header One</h1>
+     <!-- hexadecimal(base 16). 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F -->
+      <!-- shorthand -->
+       <h1 id="hex1">Header One</h1>
+       <!-- Long Hand  00ff00-->
+       <h1 id="hex2">Header One</h1>
+       <!-- hsl Hue, Saturation, Lightness -->
+        <!-- 
+       Hue is a color wheel ranging from 0-360. 0=red; 120=green; 240=blue; 360=red
+       Saturation how strong is the color in per cent. 0%=gray; 100%=sharp
+       Lightness talks about the whiteness or darkness. 0%=dark; 100%=white; 50%=normal
+        -->
+       <h1 id="hsl1">Header One</h1>
+       <h1 id="hsl2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+         Officia atque temporibus </h1>
+    <a href="https:www.facebook.com" style="text-decoration: none;" target="_blank">FaceBook</a>
+    <!-- CSS Border
+    The boundary, edge.
+    CSS Margin 
+    CSS Fonts
+    1. serif
+    2. sans-serif
+    3. monospace
+    4. cursive
+    5. fantacy
+    css Syntax
+    selector{property:value;property:value}
+    DRY Don't Repeat Yourself
+    -->
+    <!-- CSS Combinators: They are used to show some relationships between selectors -->
+     <!-- <p>Paragraph</p> -->
+     <h2>Header 2</h2>
+     <h3>Header 3</h3>
+
+     <!-- 
+     CSS Combinators
+     1. Descendant combinator (space)
+     2. Child combinator (>)
+     3. Next Sibling combinator (+)
+     4. Subsequent Sibling combinator (~) tildel sign
+     -->
+
+     <div>
+        <p>Para 1</p>
+        <footer>
+            <p>Para 2</p>
+            <section> 
+                <section>
+<p>Para great-grand</p>
+            </section>
+        </section>
+        </footer>
+        <p>Para 3</p>
+        <p>Para 4</p>
+        <p>Para 5</p>
+     </div>
+
+     <!-- Next Sibling -->
+      <div>
+        <p>Para next 1</p>
+        <section>
+            <p>Para sect</p>
+        </section>
+        <p>Para after sect 1</p>
+        <p>Para after sect 2</p>
+        <p>Para after sect 3</p>
+      </div>
+
+</body>
+</html>
