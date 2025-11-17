@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+
+        @keyframes demo {
+            from{background-color: red;}
+            to{background-color: blue;}
+        }
+
+      
+        .anim{
+            height: 300px;
+            width: 300px;
+            background-color: orange;
+            color: white;
+            animation-name:anime ;
+            animation-duration: 4s;
+             animation-iteration-count: infinite;
+        }
+
+          @keyframes anime {
+            0%{background-image: url('images/bag1.avif'); border-radius: 50%;margin-left: -300px; top: 0px;}
+            25%{background-image: repeating-radial-gradient(red 10%,yellow 15%, green 20%); margin-left: 300px; margin-top: 0px;}
+            50%{background-image: linear-gradient(red,blue,yellow); margin-left:300px; margin-top: 300px;}
+            75%{background-color: yellow; transform: skew(45deg); margin-left: 0px; margin-top: 300px;}
+            100%{background-color: red; font-size: 300px; margin-left: 0px; margin-top: 0px;}
+        }
+        .anime{
+            height: 300px;
+            width: 300px;
+            background-color: dodgerblue;
+            color: white;
+            margin-top: 50px;
+            animation-name:anime ;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="anim">
+        Animation
+    </div>
+    <div class="anime">
+        Animation
+    </div>
+</body>
+</html>
