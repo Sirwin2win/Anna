@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container{
+    display: grid;
+    background-color: red;
+    padding: 5px;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: auto auto auto; */
+    grid-template-columns: auto auto auto ; 
+    /* grid-template-columns: repeat(4,1fr); */
+    /* column-gap: 5px;
+    row-gap: 5px; */
+    gap: 10px;
+    /* justify-content: space-around; */
+    /* align-content: space-around; */
+    /* place-content: center center; */
+}
+
+
+.container div{
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    background-color: blue;
+    /* grid-column-end: 1; */
+
+}
+
+.container2{
+    display: grid;
+    background-color: lime;
+    padding: 5px;
+    gap: 5px;
+    grid-template-areas: 'header header header header header header'
+                          'manu main main main main right'
+                          'menu footer footer footer footer footer';
+}
+.header{
+    grid-area: header;
+}
+.menu{
+    grid-area: menu ;
+    /* height: 300px; */
+    
+}
+.main{
+    grid-area: main;
+}
+.right{
+    grid-area: right;
+}
+.footer{
+    grid-area: footer;
+}
+
+.container2 div{
+    background-color: orange;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <!-- 
+    CSS GRID
+    For the container
+    1. diplay:grid
+    2. grid-template-columns
+    3. grid-template-rows
+    4. grid-template-areas
+    5. justify-content
+    6. align-content
+    7. place-content: This is a shorthand of align-content and justify-content
+    For the Items
+    1. grid-column-start
+    2. grid-column-end
+    3. grid-column
+    4. grid-row-start
+    5. grid-row-end
+    6. grid-row
+    7. order
+    8. justify-self
+    9. align-self
+    10. place-self
+    grid-template-columns: This define the number and width of the columns in the grid
+    grid-template-rows: This defines the number and height in the rows
+    grid-template-area: This defines how to display columns and rows using the named grid items
+    -->
+    <div class="container">
+        <div class="item1" style="order: 4;">Item1</div>
+        <div class="item2" style="order: 6;">Item2</div>
+        <div class="item3" style="order: 0;">Item3</div>
+        <div class="item4" style="order: 2;">Item4</div>
+        <div class="item5" style="order: 3;">Item5</div>
+        <div class="item6" style="order: 5;">Item6</div>
+    </div>
+    <div class="container2">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="main">Main</div>
+        <div class="right">Right</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
