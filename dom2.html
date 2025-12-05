@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Node creation</title>
+</head>
+<body>
+    <div id="parent"></div>
+    <button >1</button>
+    <button >2</button>
+   <script>
+    // bring in the div with an id of parent
+    const parent = document.getElementById('parent')
+    // create a paragraph element
+    const para = document.createElement('p')
+    // create a text content for the p tag
+    para.textContent = 'I am a javascript paragraph element'
+    parent.appendChild(para)
+    // Note that a newly created element will not show until it is appended to an existing element
+    // giving an id attribute to the p tag
+    para.id = 'paraId'
+    // giving a class attribute to the p tag
+    para.classList.add('paraClass')
+    /*
+JavaScript Event and Event Listener
+Events are what happen to html elements on the browser e.g click,mouseover,keydown, load etc
+Event listeners are javascript strings that listen for the events
+Event handlers : are functions that are called when an event happens
+    */
+   function greet(){
+    alert('Good morning')
+   }
+// Using the event listener on buttons
+const btn = document.getElementsByTagName('button')
+console.log(btn)
+for(let i = 0; i<btn.length; i++){
+    // console.log(btn[i])
+    btn[i].addEventListener('click',greet)
+}
+
+   </script> 
+</body>
+</html>

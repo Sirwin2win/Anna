@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs(Application Programming Interface)</title>
+</head>
+<body>
+    <div id="parent"></div>
+    <script>
+        const url = 'https://fakestoreapi.com/products'
+    fetch(url)
+    .then(res=>res.json())
+    .then(json=> json.forEach(product => {
+        // console.log(product)
+        // accessing the div parant element
+        const parent = document.getElementById('parent')
+             // creating an image tag
+        const img = document.createElement('img')
+        img.src = product.image
+        img.style.height = '200px'
+        img.style.width = '200px'
+        // append img to parent
+        parent.appendChild(img)
+        // create an h5 element for product title
+        const h5 = document.createElement('h5')
+        // assigning product title to h5 as its content
+        h5.textContent = product.title
+        // appedding h5 to parent
+        parent.appendChild(h5)
+        // creating a p tag for the product description
+        const p = document.createElement('p')
+        // assign product description to the p tag
+        p.textContent = product.description
+        // append p tag to parent
+        parent.appendChild(p)
+   
+
+
+
+    }))
+    </script>
+</body>
+</html>

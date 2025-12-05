@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Only Screan and ()</title>
+    <style>
+        h1{
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+            color: white;
+        }
+        @media only screen and (max-width:600px){
+            h1{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            color: white; 
+            }
+        }
+        @media only screen and (min-width:600px){
+            h1{
+            height: 300px;
+            width: 300px;
+            background-color: lime;
+            color: white; 
+            }
+        }
+        @media only screen and (min-width:768px){
+            h1{
+            height: 300px;
+            width: 300px;
+            background-color: fuchsia;
+            color: white; 
+            }
+        }
+        @media only screen and (min-width:992px){
+            h1{
+            height: 300px;
+            width: 300px;
+            background-color: orange;
+            color: white; 
+            }
+        }
+        @media only screen and (min-width:1200px){
+            h1{
+            height: 300px;
+            width: 300px;
+            background-color: dodgerblue;
+            color: white; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Media</h1>
+    <!-- 
+Devices Breakpoints
+1. Extra small screen/devices e.g phones
+@media only screen and (max-width:600px){...}
+2. Small creen e.g portrait tablets or large phone
+@media only screen and (min-width:600px){...}
+3. Medium device/ screen e.g landscape tablets
+@media only screen and (min-width: 768px){...}
+4. Large device e.g laptops/desktops
+@media only screen and (min-width:992px){...}
+5. Extra Large devices e.g large laptops and desktops
+@media only screen and (min-width:1200px)  
+-->
+</body>
+</html>
